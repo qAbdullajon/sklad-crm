@@ -10,32 +10,35 @@ export default function Login() {
   const [password, setPassword] = useState("");
 
   const handleSubmit = (e) => {
-    e.preventDefault(); // form submitda sahifa yangilanmasin
-
+    e.preventDefault();
     console.log("Email:", email);
     console.log("Password:", password);
-
-    // Shu yerda API chaqirishing yoki login logic bo'lishi mumkin
   };
 
   return (
     <div className="bg-[#f4f9fd] min-h-screen flex items-center justify-center px-4 py-6">
-      <div className="flex flex-col lg:flex-row w-full max-w-6xl rounded-3xl overflow-hidden bg-white shadow-lg">
+      <div className="flex flex-col lg:flex-row w-full max-w-6xl rounded-3xl overflow-hidden bg-white shadow-lg min-h-[700px]">
         {/* Left Section */}
-        <div className="hidden lg:flex flex-col flex-1 justify-between bg-[#3F8CFF] text-white lg:w-1/2 px-6 py-8 xl:px-12 xl:py-10">
+        <div className="hidden lg:flex flex-col justify-between bg-[#3F8CFF] text-white w-1/2 px-6 py-8 xl:px-12 xl:py-10">
           <div className="flex items-center gap-6">
             <img src={Logo} alt="Logo" className="w-10 h-10 object-contain" />
             <p className="text-2xl xl:text-3xl font-bold">Woorkroom</p>
           </div>
-          <p className="text-2xl xl:text-4xl font-bold leading-snug my-8 xl:mt-24">
-            Your place to work. <br />
-            Plan. Create. Control.
-          </p>
-          <img
-            className="mt-auto max-w-[400px] mx-auto"
-            src={BImage}
-            alt="Illustration"
-          />
+
+          <div className="flex-1 flex items-center">
+            <p className="text-2xl xl:text-4xl font-bold leading-snug">
+              Your place to work. <br />
+              Plan. Create. Control.
+            </p>
+          </div>
+
+          <div className="w-full flex justify-center">
+            <img
+              src={BImage}
+              alt="Illustration"
+              className="w-full max-w-[400px] h-auto object-contain"
+            />
+          </div>
         </div>
 
         {/* Right Section */}
