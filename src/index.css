@@ -1,7 +1,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap");
+@import "tailwindcss";
+
 * {
-  padding: 0;
-  margin: 0;
   box-sizing: border-box;
   font-family: "Nunito Sans", sans-serif;
+}
+
+@layer components {
+  .text-color {
+    @apply text-[#0A1629];
+  }
+
+  .text-muted {
+    @apply text-[#7D8592];
+  }
+  .border-s {
+    @apply border border-[#D8E0F0]
+  }
 }
