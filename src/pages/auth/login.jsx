@@ -22,7 +22,7 @@ export default function Login() {
     <div className="bg-[#f4f9fd] min-h-screen flex items-center justify-center px-4 py-6">
       <div className="flex flex-col lg:flex-row w-full max-w-6xl rounded-3xl overflow-hidden bg-white shadow-lg">
         {/* Left Section */}
-        <div className="hidden lg:flex flex-col justify-between bg-[#3F8CFF] text-white lg:w-1/2 px-6 py-8 xl:px-12 xl:py-10">
+        <div className="hidden lg:flex flex-col flex-1 justify-between bg-[#3F8CFF] text-white lg:w-1/2 px-6 py-8 xl:px-12 xl:py-10">
           <div className="flex items-center gap-6">
             <img src={Logo} alt="Logo" className="w-10 h-10 object-contain" />
             <p className="text-2xl xl:text-3xl font-bold">Woorkroom</p>
