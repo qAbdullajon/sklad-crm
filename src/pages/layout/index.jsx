@@ -7,10 +7,13 @@ import {
   ChevronDown,
   LogIn,
   LogOut,
+  MessageCircle,
   Search,
   Settings,
   User,
 } from "lucide-react";
+import Avatar1 from "@assets/avatar1.png";
+import SupportImg from "@assets/support.png";
 
 const ProfileDropdown = () => {
   return (
@@ -53,7 +56,7 @@ export default function Layout() {
 
   return (
     <div className="flex gap-[30px] p-5 bg-[#f3f8fc]">
-      <aside className="w-[200px] h-[calc(100vh-40px)] flex flex-col justify-between rounded-3xl bg-white text-black py-10 pl-4">
+      <aside className="w-[200px] min-h-[calc(100vh-40px)] flex flex-col justify-between rounded-3xl bg-white text-black py-10 pl-4">
         <div>
           <NavLink to={"/"}>
             <img src={Logo} alt="Logo" />
@@ -93,13 +96,20 @@ export default function Layout() {
           </nav>
         </div>
         <div className="pr-3">
+          <div className="w-full h-[168px] bg-[#ecf3ff] rounded-3xl">
+            <img className="mx-auto -translate-y-[36px]" src={SupportImg} alt="" />
+            <button className="text-base cursor-pointer font-bold flex items-center gap-2 bg-[#3F8CFF] rounded-[14px] text-white px-5 mx-auto -translate-y-[25px] py-[11px]">
+              <MessageCircle />
+              <span>Support</span>
+            </button>
+          </div>
           <button className="text-base font-semibold text-[#7D8592] flex items-center gap-4 cursor-pointer w-full hover:bg-gray-100 px-2 py-2.5 rounded-[10px]">
             <LogIn />
             <span>Logout</span>
           </button>
         </div>
       </aside>
-      <div className="flex-1 flex flex-col gap-[30px] h-screen">
+      <div className="flex-1 flex flex-col gap-[30px] min-h-screen">
         <header className="flex items-center justify-between">
           <div className="relative group">
             <input
@@ -119,7 +129,7 @@ export default function Layout() {
                 className="flex items-center bg-white gap-3 h-12 rounded-[14px] px-3 text-base font-bold text-color cursor-pointer"
               >
                 <img
-                  src="https://i.pravatar.cc/40"
+                  src={Avatar1}
                   alt="Avatar"
                   className="w-[30px] h-[30px] rounded-full"
                 />
