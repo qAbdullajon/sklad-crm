@@ -15,6 +15,22 @@
     @apply text-[#7D8592];
   }
   .border-s {
-    @apply border border-[#D8E0F0]
+    @apply border border-[#D8E0F0];
   }
+}
+.custom-scroll {
+  transform: translateX(-20px);
+}
+
+.custom-scroll::-webkit-scrollbar {
+  width: 8px;
+}
+
+.custom-scroll::-webkit-scrollbar-thumb {
+  background-color: #d3dbeb;
+  border-radius: 10px;
+}
+
+.custom-scroll::-webkit-scrollbar-track {
+  background-color: #ebf0fa;
 }

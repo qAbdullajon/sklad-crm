@@ -1,10 +1,13 @@
 import {
+  Building2,
   Calendar,
   FolderOpen,
+  Gift,
   Layers,
   LayoutGrid,
   MessageCircleMore,
   Plane,
+  Tv,
   Users,
 } from "lucide-react";
 
@@ -12,7 +15,7 @@ export const layoutNav = [
   {
     id: 1,
     name: "Dashboard",
-    path: "/",
+    path: "/dashboard",
     icon: LayoutGrid,
   },
   {
@@ -143,20 +146,71 @@ export const nearestEvents = [
     name: "Presentation of the new department",
     level: "top",
     createdAt: "Today | 5:00 PM",
-    time: '4h'
+    time: '4h',
+    icon: Building2,
+    color: "#3F8CFF"
   },
   {
     id: 2,
     name: "Anna’s Birthday",
     level: "bottom",
     createdAt: "Today | 5:00 PM",
-    time: '4h'
+    time: '4h',
+    icon: Gift,
+    color: "#DE92EB"
   },
   {
     id: 3,
-    name: "Ray’s Birthday",
+    name: "Meeting with Development Team",
     level: "bottom",
     createdAt: "Today | 5:00 PM",
-    time: '4h'
+    time: '4h',
+    icon: Users,
+    color: "#fdc748"
+  },
+  {
+    id: 4,
+    name: "Ray’s Birthday",
+    level: "bottom",
+    createdAt: "Tomorrow | 2:00 PM",
+    time: '1h 30min',
+    icon: Gift,
+    color: "#DE92EB"
+  },
+  {
+    id: 5,
+    name: "Meeting with CEO",
+    level: "top",
+    createdAt: "Sep 14 | 5:00 PM",
+    time: '1h',
+    icon: Building2,
+    color: "#3F8CFF"
+  },
+  {
+    id: 6,
+    name: "Movie night (Tenet)",
+    level: "bottom",
+    createdAt: "Sep 15 | 5:00 PM",
+    time: '3h',
+    icon: Tv,
+    color: "#6D5DD3"
+  },
+  {
+    id: 7,
+    name: "Lucas’s Birthday",
+    level: "bottom",
+    createdAt: "Sep 29 | 5:30 PM",
+    time: '2h',
+    icon: Gift,
+    color: "#DE92EB"
+  },
+  {
+    id: 8,
+    name: "Meeting with CTO",
+    level: "top",
+    createdAt: "Sep 14 | 5:00 PM",
+    time: '1h',
+    icon: Building2,
+    color: "#3F8CFF"
   },
 ]

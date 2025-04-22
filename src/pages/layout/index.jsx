@@ -14,6 +14,7 @@ import {
 } from "lucide-react";
 import Avatar1 from "@assets/avatar1.png";
 import SupportImg from "@assets/support.png";
+import GlobalModal from "../../components/global-modal";
 
 const ProfileDropdown = () => {
   return (
@@ -55,8 +56,8 @@ export default function Layout() {
   const toggleDropdown = () => setOpen((prev) => !prev);
 
   return (
-    <div className="flex gap-[30px] p-5 bg-[#f3f8fc]">
-      <aside className="w-[200px] min-h-[calc(100vh-40px)] flex flex-col justify-between rounded-3xl bg-white text-black py-10 pl-4">
+    <div className="flex gap-[30px] p-5 bg-[#f3f8fc] relative">
+      <aside className="w-[200px] min-h-[100vh] flex flex-col justify-between rounded-3xl bg-white text-black py-10 pl-4">
         <div>
           <NavLink to={"/"}>
             <img src={Logo} alt="Logo" />
@@ -95,9 +96,13 @@ export default function Layout() {
             })}
           </nav>
         </div>
-        <div className="pr-3">
+        <div className="pr-3 pt-20">
           <div className="w-full h-[168px] bg-[#ecf3ff] rounded-3xl">
-            <img className="mx-auto -translate-y-[36px]" src={SupportImg} alt="" />
+            <img
+              className="mx-auto -translate-y-[36px]"
+              src={SupportImg}
+              alt=""
+            />
             <button className="text-base cursor-pointer font-bold flex items-center gap-2 bg-[#3F8CFF] rounded-[14px] text-white px-5 mx-auto -translate-y-[25px] py-[11px]">
               <MessageCircle />
               <span>Support</span>
@@ -141,10 +146,11 @@ export default function Layout() {
             </div>
           </div>
         </header>
-        <main className="pt-[30px]">
+        <main className="">
           <Outlet />
         </main>
       </div>
+      <GlobalModal />
     </div>
   );
 }

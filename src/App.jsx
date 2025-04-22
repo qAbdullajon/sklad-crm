@@ -4,6 +4,7 @@ import Login from "./pages/auth/login";
 import Layout from "./pages/layout";
 import Dashboard from "./pages/dashboard";
 import Products from "./pages/products";
+import NearestEvents from "./pages/dashboard/nearest-events";
 
 export default class App extends Component {
   render() {
@@ -13,7 +14,8 @@ export default class App extends Component {
           <Route path="/login" element={<Login />} />
 
           <Route path="/" element={<Layout />}> 
-            <Route index element={<Dashboard />} />
+            <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/dashboard/nearest-events" element={<NearestEvents />} />
             <Route path="/products" element={<Products />} />
           </Route>
         </Routes>
