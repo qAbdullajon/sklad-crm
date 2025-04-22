@@ -205,9 +205,9 @@ export default function Dashboard() {
           <div className="w-[339px]">
             <div className="px-5 py-7 bg-white rounded-3xl">
               <div className="flex items-center justify-between pb-6">
-                <p className="text-color text-[22px] font-bold">Products</p>
+                <p className="text-color text-[22px] font-bold">Nearest Events</p>
                 <NavLink
-                  to={"#"}
+                  to={"/dashboard/nearest-events"}
                   className="text-base font-semibold text-[#3F8CFF] flex items-center gap-1"
                 >
                   <span>View all</span>
@@ -215,7 +215,7 @@ export default function Dashboard() {
                 </NavLink>
               </div>
               <div className="flex flex-col gap-6">
-                {nearestEvents.map((item) => (
+                {nearestEvents.slice(0,3).map((item) => (
                   <div className="flex gap-4 h-[110px]" key={item.id}>
                     <div
                       className={`w-1 h-full rounded-[2px] ${
